@@ -1,0 +1,10 @@
+credentials:
+  usernames:
+    vkd:
+      email: vkd@gmail.com
+      name: vkd
+      password: $2b$12$hr13QUSexif3a.pJb4ugde9vXqs0kvf3jOdrtUaoaqwGfhMCr3Ap2
+cookie:
+  expiry_days: 30
+  key: example 
+  name: cookiex

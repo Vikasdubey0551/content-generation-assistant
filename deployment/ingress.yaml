@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  tls:
+    - hosts:
+      - ui.advertisertextgeneration.info
+      secretName: my-tls-secret
+  rules:
+    - host: "api.advertisertextgeneration.info"
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: fastapi-svc
+                port:
+                  number: 8080
+            path: "/"
+    - host: "ui.advertisertextgeneration.info"
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: streamlit-svc
+                port:
+                  number: 8501
+            path: "/"
