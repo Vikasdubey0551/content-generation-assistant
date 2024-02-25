@@ -2,7 +2,18 @@
 
 ## Content Generation Assistant 
 
-This is a Content Generation Assistant that generates a draft for a given title/seed sentence/keywords and other parameters. Under the hood, it calls the API service deployed on GKE. The Flan-T5 model used here is not fine-tuned so, the result may not be very accurate.
+This is a Content Generation Assistant that generates a draft for a given title/seed sentence/keywords and other parameters. Under the hood, it calls the API service deployed on GKE. The Flan-T5 model used here is not fine-tuned. It was only meant for the demo purpose. Therefore, the result may not be very accurate.
+
+### Parameter-Efficient Fine-Tuning (PEFT)
+PEFT with QLORA is explored in the google colab notebook. 
+
+[<img src="https://colab.research.google.com/img/colab_favicon_256px.png" width="50"/>](https://colab.research.google.com/drive/1uDSgV5fQ98xZcxJYrrqfE4RUSo8hsjd1?usp=sharing)
+
+Two of the finetuned falcon 1B/7B models by me can be found here:
+
+[vikasdubey055/falcon-1b-peft-qlora-finetuned](vikasdubey055/falcon-1b-peft-qlora-finetuned) 1B model
+[vikasdubey055/falcon-1b-peft-qlora-finetuned](https://huggingface.co/vikasdubey055/falcon-7b-peft-qlora-finetuned) 7B model
+
 
 ![Read docs of the API the API](./images/demo.png)
 
